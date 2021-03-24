@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>矿工和用户怎样合作共赢 | Akesu</title><meta name="author" content="Akesu"><meta name="copyright" content="Akesu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、简介 Filecoin网络通过允许任何人作为存储提供商参与实现了规模经济。目前，该网络由分布在全球各地的数百家存储提供商组成。内容寻址和加密存储证明验证了数据在矿工的硬件上长期正确安全地存储，从而创造了一个强大可靠的服务。  这篇博文涵盖了Filecoin中两种类型交易的基本阶段，即存储交易和检索交易，并详细介绍了它们的生命周期。并解释了密码学证明是如何用于验证系统中的参与者是否按照承诺履行职">
+<meta property="og:type" content="article">
+<meta property="og:title" content="矿工和用户怎样合作共赢">
+<meta property="og:url" content="http://example.com/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/index.html">
+<meta property="og:site_name" content="Akesu">
+<meta property="og:description" content="一、简介 Filecoin网络通过允许任何人作为存储提供商参与实现了规模经济。目前，该网络由分布在全球各地的数百家存储提供商组成。内容寻址和加密存储证明验证了数据在矿工的硬件上长期正确安全地存储，从而创造了一个强大可靠的服务。  这篇博文涵盖了Filecoin中两种类型交易的基本阶段，即存储交易和检索交易，并详细介绍了它们的生命周期。并解释了密码学证明是如何用于验证系统中的参与者是否按照承诺履行职">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-03-24T03:29:33.687Z">
+<meta property="article:modified_time" content="2021-03-24T03:29:35.517Z">
+<meta property="article:author" content="Akesu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-03-24 11:29:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Akesu" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Akesu</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">矿工和用户怎样合作共赢</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-03-24T03:29:33.687Z" title="Created 2021-03-24 11:29:33">2021-03-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-03-24T03:29:35.517Z" title="Updated 2021-03-24 11:29:35">2021-03-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="矿工和用户怎样合作共赢"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>一、简介</p>
+<p>Filecoin网络通过允许任何人作为存储提供商参与实现了规模经济。目前，该网络由分布在全球各地的数百家存储提供商组成。内容寻址和加密存储证明验证了数据在矿工的硬件上长期正确安全地存储，从而创造了一个强大可靠的服务。</p>
+<p><img src="https://n.sinaimg.cn/sinakd2021317s/402/w1281h721/20210317/909b-kmkptxe3680519.png" alt="img"></p>
+<p>这篇博文涵盖了Filecoin中两种类型交易的基本阶段，即存储交易和检索交易，并详细介绍了它们的生命周期。并解释了密码学证明是如何用于验证系统中的参与者是否按照承诺履行职责的。</p>
+<p>二、Filecoin的数据</p>
+<p>为了在Filecoin上存储文件，用户必须首先在其本地Filecoin节点中导入文件。这一步会产生一个数据CID——内容标识符，唯一描述该内容的ID，之后数据会传输给矿工。另一种在Filecoin上存储文件的方式是通过离线交易，这在本篇文章中没有涉及。</p>
+<p>将数据导入本地的Filecoin节点，可以使用lotus客户端导入命令。记住生成的数据CID很重要（以后在本地节点上也可以使用），因为以后从矿工那里检索数据时必须用到它。</p>
+<p>将数据导入本地节点后，用户必须发起交易。这可以通过lotus客户端交易命令来完成。该命令以数据CID作为输入，生成Filecoin Piece，并交互式地带领用户完成存储交易流程，详见下文。</p>
+<p>Filecoin Piece是用户存储在Filecoin网络上的数据的主要协商单位。Filecoin Piece没有特定的大小，但受网络参数的制约，受扇区大小的上限。如果一个Filecoin Piece大于矿工支持的扇区大小，那么它必须被分割成更多的碎片，以便每个碎片都适合一个扇区。</p>
+<p><img src="https://n.sinaimg.cn/sinakd2021317s/77/w553h324/20210317/8840-kmkptxe3680516.png" alt="img"></p>
+<p>一个Filecoin Piece就是一个CAR文件，包含一个IPLD DAG，有对应的数据和Piece CID。</p>
+<p>CAR即内容可寻址档案（Content Addressable aRchives）—— 每个 CAR 文件是一个 IPLD DAG 的序列化表示，即将其数据块串起来，再加上描述DAG图的头部信息（还有 根CID）。</p>
+<p>当用户想要在Filecoin网络中存储文件时，首先要用UnixFS生成文件的IPLD DAG（这就是lotus客户端导入命令的作用）。代表DAG根节点的哈希是一个IPFS风格的CID，称为数据CID。</p>
+<p>UnixFS是一种基于protobuf的格式，用于描述IPFS中的文件、目录和符号链接。在Filecoin中，UnixFS被用作提交给Filecoin网络的文件格式。</p>
+<p>所产生的CAR文件用额外的零位来填充，以便使文件成为二进制的merkle树。</p>
+<p>三、仓储交易流程</p>
+<p>用户可以通过交易在Filecoin网络中存储数据，并从Filecoin网络中检索数据。网络中的参与者，包括矿工（供应方）和用户（需求方），通过存储交易和检索交易进行互动。</p>
+<p>一个存储交易的生命周期如下：</p>
+<p>\1. 发现</p>
+<p>用户识别矿工并确定他们当前的要价，即矿工为了接受交易而希望收到的每GiB每纪元（30秒）的价格，单位为attoFIL（1 attoFIL等于10^-18 * FIL）。目前，Filecoin中一笔交易的最短期限为180天。</p>
+<p>您可以通过 JSON RPC API 查询已同步的节点，列出所有当前活跃的矿工（为了测试目的，使用了公共终端节点，使用Filecoin.StateListMiners方法。</p>
+<p><img src="https://n.sinaimg.cn/sinakd2021317s/778/w554h224/20210317/7f66-kmkptxe3680610.png" alt="img"></p>
+<p>您可以根据矿工在网络中的信誉和能力进行选择。矿工的信誉指标还未进入 Filecoin 协议，本文亦不涉及。</p>
+<p>一旦你选择了一个特定的矿工，你需要获取它的PeerID，例如用Filecoin.StateMinerInfo方法，通过libp2p协议与他们建立安全连接。</p>
+<p><img src="https://n.sinaimg.cn/sinakd2021317s/738/w554h184/20210317/b588-kmkptxe3680611.png" alt="img"></p>
+<p>然后你可以用Filecoin.ClientQueryAsk方法查询一个签名的StorageAsk。这将建立一个与所选矿工的直接libp2p连接，并询问存储报价。</p>
+<p><img src="https://n.sinaimg.cn/sinakd2021317s/364/w554h610/20210317/edc7-kmkptxe3680679.png" alt="img"></p>
+<p>结果包括这个矿工愿意接受的交易细节，比如接纳的Filecoin Piece大小的范围和每GiB每纪元的价格。需要注意的是，提出与矿工的存储要求相匹配的存储交易建议是一个前提条件，但不足以确保交易被接受——存储提供商可能会在之后运行自己的决策逻辑。</p>
+<p>\2. 协商和数据发送</p>
+<p>在这一阶段，双方就交易条款达成协议，如交易成本、交易期限、交易起始时间等。然后将数据从客户端转移到矿机上。</p>
+<p>\3. 发布</p>
+<p>通过PublishStorageDeals消息在链上发布交易，使存储提供商对交易公开负责。</p>
+<p>\4. 完成</p>
+<p>交易在链上发布后，就会交给存储挖掘子系统，打包成一个扇区，随后进行封装，随后不断证明可用。</p>
+<p>四、存储挖矿子系统</p>
+<p>存储挖矿子系统确保 Filecoin 网络的数据由矿工有效保存，并且：</p>
+<p>1.参与Filecoin存储市场，承接客户端数据，参与存储交易。</p>
+<p>2.参与Filecoin存储力共识，验证并生成区块，以壮大Filecoin区块链，并以此赚取区块奖励和费用。</p>
+<p>它监督以下流程：</p>
+<p>承诺新存储和注册新扇区</p>
+<p>为了在Filecoin中注册一个扇区，矿工必须对该扇区进行封装。封装过程需要大量计算，以证明的形式产生数据的唯一表示，称为复制证明或PoRep。一旦产生证明，矿工将其压缩并将结果提交给区块链。这就证明矿工确实复制了他们同意存储的数据副本。</p>
+<p>持续证明存储</p>
+<p>每个存储矿工都必须不断地在链上提交证明，以证明扇区被完整存储。</p>
+<p>宣布存储故障并从故障中恢复</p>
+<p>如果某部门未能提交上述证明，将导致故障，矿工将受到处罚。</p>
+<p>五、矿工和用户注意事项</p>
+<p>如上所述，存储交易是在链上发布后，才会被激活和封装。这一点很重要，因为发布交易会将用户的资金锁定在链上托管。只有如此，在封存数据进扇区之后，矿工的收益才有保障。</p>
+<p>把在链上发布交易看成是签署合同，把封存和激活交易看成是开始做矿工承诺的工作，是有帮助的。</p>
+<p>从想要在Filecoin上存储数据的用户的角度来看，交易大致经过以下几个阶段：</p>
+<p>\1. 资金交易：用户将资金锁定在托管中。</p>
+<p>\2. 向矿工提出交易建议。</p>
+<p>\3. 检查意向接受交易。</p>
+<p>\4. 将交易的数据传输给矿工：这是通过GraphSync协议完成的。</p>
+<p>\5. 检查是否接受：确保矿工已经接受了交易并在链上发布。</p>
+<p>\6. 封装：交易正在进行中，矿工目前正在密封包含该交易的部门。</p>
+<p>\7. 激活：交易已被封存并处于活跃状态。</p>
+<p>从通过存储用户数据为用户提供服务的矿工的角度来看，交易大致经过以下几个阶段：</p>
+<p>\1. 验证交易：收到交易提案，并检查其参数（规模、价格等）。</p>
+<p>\2. 检查是否锁定资金：确保用户有锁定的资金，可以支付交易。</p>
+<p>\3. 等待数据：收到用户提供的交易数据。</p>
+<p>\4. 在链<a href="javascript:;">上为</a>交易提供抵押物。</p>
+<p>\5. 在链上发布交易上链。</p>
+<p>\6. 封装扇区。</p>
+<p>\7. 激活交易：从这里开始，矿工定期提交时空证明，证明他们正在持续存储数据。</p>
+<p>六、检索交易流程</p>
+<p>检索交易与存储交易不同，使用支付通道，主要链下完成。数据传输是按量计价的，用户在数据传输的过程中逐步向矿工支付费用。整个过程，只有创建支付通道、兑换凭证，是涉及与Filecoin区块链交互的。</p>
+<p>这是整体流程：</p>
+<p>\1. 发现：用户识别拥有所需数据的矿工，并向他们索取检索报价——每字节价格、解封价格、支付间隔等。</p>
+<p>\2. 支付通道设置：用户在他们和矿工之间设置一个支付通道（如果还没有的话）。</p>
+<p>\3. 数据传输与支付：矿工向用户发送数据，直到需要支付。</p>
+<p>此时用户还未获得完整数据。</p>
+<p>七、时空证明</p>
+<p>上面的章节快速列举了许多使 Filecoin 独一无二的细节，在概率上对用户数据提供了保证。本节介绍了 Filecoin 使用的两种证明，并解释了它们是如何成为协议的一部分，以及它们所解决的问题。</p>
+<p>时空证明（PoSt）是矿工向 Filecoin 网络提交的证明，证明其正在继续为网络存储数据的唯一副本。</p>
+<p>目前，时空证明在 Filecoin 中以两种类型存在：</p>
+<p>\1. WinningPoSt</p>
+<p>WinningPoSt是奖励存储矿工对 Filecoin 网络贡献的机制。在每个epoch开始时，一小部分存储矿工被选出来，每个矿工挖出一个新的区块。具体要求是，这些矿工提交指定扇区的压缩存储证明。每个成功创建区块的当选矿工都会获得FIL（区块奖励），以及向其他想在区块中包含信息的 Filecoin 参与者收取费用的机会。</p>
+<p>存储矿工如果在必要的时间窗口内没按要求做到，将失去生产区块的机会，但不会因为没产出区块而受到其他惩罚。</p>
+<p>\2. WindowPoStWindowPoSt是 Filecoin 区块链对存储矿工做出的承诺进行审核的机制。</p>
+<p>每个存储矿工都应该维护他们的承诺扇区。这些扇区包含与用户达成的交易，或也可能为空。后者被称为承诺容量，也就是说，矿工可以做出容量承诺，用任意数据填充一个扇区，而非用户数据。维护这些扇区可以让存储矿工证明他们在网络预留空间。</p>
+<p>每一天分成若干时间窗口，目前48个时间窗口，每个持续时间为30分钟（60个epoch，因为1个epoch等于30秒）。</p>
+<p>每个矿工的承诺扇区分成若干组，每组对应一个时间窗口。</p>
+<p>在一个时间窗（30分钟）内，每个存储矿工必须为其该时间窗中的每个扇区提交一份时空证明。这需要随时访问该时间窗轮到的每个扇区，并生成 zk-SNARK 证明加入区块发布到 Filecoin 区块链上。这样，每个承诺存储的扇区在每24小时内至少会被审核一次，并保留一个永久的、可验证的、公开的记录，证明每个存储矿工保守承诺。</p>
+<p><img src="https://n.sinaimg.cn/sinakd2021317s/727/w553h174/20210317/c345-kmkptxe3680678.png" alt="img"></p>
+<p>在上图例子中，您能看到一个矿工应该在 deadline 0 (&gt; 16TB)、deadline 1 (</p>
+<p>Filecoin 网络期望所存储的数据持续可用。未能为一个扇区提交WindowPoSt将导致一个故障，而供应该扇区的存储矿工将被惩罚。这激励存储矿工健康运转。</p>
+<p>八、故障</p>
+<p>当证明在证明期内因网络连接丢失、存储故障或恶意行为导致证明未被纳入Filecoin区块链时，就会发生故障。</p>
+<p>当一个扇区被标记为故障时，Filecoin网络将对本应存储该扇区的存储矿工进行处罚（从矿工预付的抵押币中支付）。</p>
+<p>扇区故障费有三种：</p>
+<p>\1. 扇区故障费：需由每个处于故障状态的扇区每天支付。该费用的大小略高于该扇区每天预计获得的区块奖励额。如果一个扇区连续2周以上处于故障状态，该扇区将支付终止费，并从区块链状态中移除。2. 扇区故障检测费：这是一次性支付的费用，如果该故障是由链上机制检测发现而非矿工诚实上报时收取。考虑到时空证明检查的概率性，该收费额设为对应扇区在若干天时间中的区块奖励。</p>
+<p>\3. 扇区终止费：一个扇区可能因为故障或矿工主动而在到期日之前终止。收取的终止费原则上相当于一个扇区当前所产生的收益，且不超过一个限额，以免阻碍长时扇区。</p>
+<p>在filecoin.io/网站上阅读更多于故障和处理故障的经济机制</p>
+<p>九、结论</p>
+<p>本文涵盖了与存储和检索Filecoin上的数据有关的一些概念，用户和矿工为实现这一目标而参与的协议，以及这一过程中涉及的各种证明和保证。</p>
+<p>它从用户和矿工的角度详细介绍了存储和检索交易的流程，以及Filecoin协议在其中一方行为不当时实施的惩罚措施。</p>
+<p>总而言之，本文概述了Filecoin协议如何管理Filecoin网络，从而形成一个可靠和去中心化的分布式网络。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Akesu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/">http://example.com/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E6%B6%88%E6%81%AF%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">消息初步分析</div></div></a></div><div class="next-post pull-right"><a href="/%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">所有消息类型</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Akesu</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%B6%88%E6%81%AF%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90/" title="消息初步分析"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="消息初步分析"/></a><div class="content"><a class="title" href="/%E6%B6%88%E6%81%AF%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90/" title="消息初步分析">消息初步分析</a><time datetime="2021-03-24T03:29:41.551Z" title="Created 2021-03-24 11:29:41">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/" title="矿工和用户怎样合作共赢"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矿工和用户怎样合作共赢"/></a><div class="content"><a class="title" href="/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/" title="矿工和用户怎样合作共赢">矿工和用户怎样合作共赢</a><time datetime="2021-03-24T03:29:33.687Z" title="Created 2021-03-24 11:29:33">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/" title="所有消息类型"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="所有消息类型"/></a><div class="content"><a class="title" href="/%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/" title="所有消息类型">所有消息类型</a><time datetime="2021-03-24T03:29:25.955Z" title="Created 2021-03-24 11:29:25">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%94%AF%E4%BB%98%E9%80%9A%E9%81%93%E7%9B%B8%E5%85%B3/" title="支付通道相关"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付通道相关"/></a><div class="content"><a class="title" href="/%E6%94%AF%E4%BB%98%E9%80%9A%E9%81%93%E7%9B%B8%E5%85%B3/" title="支付通道相关">支付通道相关</a><time datetime="2021-03-24T03:29:13.587Z" title="Created 2021-03-24 11:29:13">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="数据结构和算法"><img src="C:\Users\李德\Desktop\表情\1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构和算法"/></a><div class="content"><a class="title" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="数据结构和算法">数据结构和算法</a><time datetime="2021-03-21T15:22:10.000Z" title="Created 2021-03-21 23:22:10">2021-03-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Akesu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,164 +1,299 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><title>Hexo</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Akesu</title><meta name="author" content="Akesu"><meta name="copyright" content="Akesu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Akesu">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Akesu">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="Akesu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: 'Copy successfully',
     error: 'Copy error',
     noSupport: 'The browser does not support'
   },
-  hexoVersion: '5.4.0'
-} </script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">John Doe</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">3</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Hexo</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right"></span></div><div id="site-info"><div id="site-title">Hexo</div><div id="site-sub-title"></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2021/03/21/linux-commend/">No title</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-21</time><div class="content"><h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>绝对路径：/…/…  相对路径：./ 表示当前目录，../表示上一级目录</p>
-<p>/表示根目录</p>
-<p>/bin目录（/usr/.bin:可执行二进制文件的目录)：存放工具</p>
-<p>/home:<del>表示当前用户的家目录，如：</del>moyu表示edu的家目录</p>
-<p>/etc:存配置文件 /dev:设备文件，挂载光驱</p>
-<p>/lib（/usr/lib）（/usr/local/lib）:存库函数</p>
-<h3 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h3><p>drwxr-xr-x:以d开头的为目录文件，以-开头的为普通文件，b\c开头的为设备文件(主要在/dev)，l开头的为link链接文件（快捷方式)</p>
-<p>文件的权限很重要，如：drwxr-xr-x moyu root</p>
-<p>红色的区别文件类型，黄色的为：文件所有者权限，绿色的为用户组权限，紫色的为其他用户权限,这里的moyu为文件所有者，root为用户组。</p>
-<p><strong>命令</strong>：</p>
-<p><strong>whoami</strong> 查询当前用户</p>
-<p><strong>cat</strong> 查看群号：cat /etc/group 查看所有用户组，里面的x:0，数字为用户组（群）号</p>
-<p>cat /etc/passwd 查看所有用户，里面的x:1001，数字为用户号</p>
-<p>如：给stdio.h其他用户分配写的权限 sudo chmod o+w stdio.h </p>
-<p>其中(u/g/o/a)分别表示文件所有者/群组/其他人/所有权限，（+、-、=表示添加，减少，赋予相关权限）</p>
-<p>修改文件所有者:<strong>chown</strong></p>
-<p>chown 用户名 文件或目录名</p>
-<p>修改文件所有组：<strong>chgrp</strong></p>
-<p>chgrp 用户组 文件或目录名</p>
-<p>cal -y 查看当年日历 </p>
-<p>cal 年份 查看某年日历</p>
-<p>date +%Y-%m-%d-%H:%M:%S 查看当前时间</p>
-<h3 id="linux命令格式"><a href="#linux命令格式" class="headerlink" title="linux命令格式"></a>linux命令格式</h3><p>[ ]表示可选</p>
-<p>command [options][parameter]</p>
-<p>查看命令用法 –help 如：ls –help (不是所有的命令都可用–help查）</p>
-<p>.开头的文件为隐藏文件</p>
-<p>查使用说明：man</p>
-<p>查询printf命令，man 1 printf,其中1代表系统命令，man 3 printf ,3代表库函数里面的</p>
-<p>history查看历史命令</p>
-<p><strong>ls</strong>参数：-a显示所有文件，包括隐藏文件</p>
-<p>-l表示以列表方式显示文件的详细信息</p>
-<p>-h表示配合-l以人性化方式显示文件大小</p>
-<p>其中ls -a -l -h和ls -lah等价</p>
-<p>ls -l可缩写为ll</p>
-<p><strong>-rw-rw-r– *<em>3*</em> edu edu 433 10月 13 10:47</strong> 红色部分3表示这个目录文件夹个数，默认一个文件夹下有2个文件夹：. 和..</p>
-<p><strong>touch</strong>创建文件（不存在的新建，存在，改时间，改为当前）</p>
-<p>ls [1-9].??? 表示匹配后缀名3个字符，文件名为1-9的文件</p>
-<p>touch *.c 把所有的.c文件时间改为当前时间</p>
-<p>touch *.c 创建*.c文件 其中\为转义字符</p>
-<p>重定向：</p>
-<p>ls /usr/include/ &gt;test.txt</p>
-<p>把ls /usr/include/命令在屏幕上显示的内容保存到text.txt中（有的话覆盖)</p>
-<p>ls ./ &gt;&gt;test.txt</p>
-<p>&gt;&gt;表示不覆盖，追加到text.txt后方</p>
-<p>cat /usr/include/stdio.h 查看文件</p>
-<p>more分屏显示：按q退出，h帮助，空格下一页</p>
-<p>管道 | ： ls | grep std</p>
-<p>grep文本搜索，std为搜索条件，可以是表达式如：[1-9].c</p>
-<p>管道：一个命令的输出可以通过管道作为另一个命令的输入</p>
-<p>清屏 clear ，pwd显示当前路径</p>
-<p>cd 切换工作目录， cd ~ 切换到当前用户主目录（/home/用户目录）</p>
-<p>cd - 可进入上一个进入的目录</p>
-<p>windows常用命令：查看目录信息:dir ，清屏：cls</p>
-<p><strong>mkdir</strong> -p递归创建 ，如：mkdir ./a/b/c -p</p>
-<p>./a/b/c同时创建abc目录</p>
-<p><strong>rmdir</strong>只能删除空文件夹</p>
-<p>rm 强大，可全删，-r表示递归删除目录下内容，删除文件夹时必须加此参数</p>
-<p>rm 文件夹名 -r ,-f 不提示 -i提示（一般-rf）</p>
-<p><strong>ln 建立文件链接</strong></p>
-<p>ln 源文件 链接文件</p>
-<p>ln -s 源文件 链接文件</p>
-<p>-s软链接（不占内存大小）</p>
-<p><strong>grep命令</strong></p>
-<p>grep mike test.txt -n</p>
-<p>grep搜索查找 查找mike关键字 test.txt表示在哪个文件里面查 -n显示行号</p>
-<p>-i 忽略大小写，-v求反，不匹配的内容</p>
-<p>“ “里面表示整体，比如grep “1 2 3” </p>
-<p>^a表示以a开头 k$表示以k结尾的 .代表任意字符</p>
-<p><strong>find</strong> 查找</p>
-<p>find ./ -name “*.h”</p>
-<p>./表目录，-name表示以名字查，*.h表示文件，查后缀为.h的文件</p>
-<p>find /tmp -size +2M</p>
-<p>查找大于2M的文件</p>
-<p>find ./ -size 4k -size -5M</p>
-<p>查找4k-5M大小的文件</p>
-<p>find ./ -perm o777</p>
-<p>查找权限为777的文件或目录</p>
-<p><strong>cp</strong>拷贝</p>
-<p> -a 复制目录，保留连接，文件属性 </p>
-<p> -f 不提示  -i 提示  -r 递归复制 -v显示进度</p>
-<p><strong>mv</strong> 移动文件</p>
-<p>-f 不提示 -i 提示 -v进度</p>
-<p><strong>file</strong> 查看文件类型</p>
-<p><strong>VIM使用：</strong></p>
-<p>复制(yank 提起):复制整行:yy</p>
-<p>粘贴（put 放下）：p</p>
-<p><strong>查看文件大小 du</strong></p>
-<p>du 文件目录 -h   查看文件的大小</p>
-<p><strong>tar打包：</strong></p>
-<p>tar -cvf aaa.tar aa/ bb/   其中-c表示创建，v表示进度 f 表示提示 aaa.tar表示打包的包名 aa/ bb/表示要打包的文件（*b表示当前目录下所有的文件）</p>
-<p><strong>解包：</strong></p>
-<p>tar -xvf aaa.tar -C ../bin   其中-x表示解包，vf和上面相同， aaa.tar表示要解包的文件，-C用于指定解包的目录，后面的地址为解包的地址，（不写-C ../bin默认为当前目录）</p>
-<p><strong>gzip压缩 （gzip后缀为.gz ; bzip2使用同理，后缀为.bz2）：</strong></p>
-<p>gzip xxx.tar    压缩某个包，在当前目录生成</p>
-<p>gzip -r xxx.tar xxx.tar.gz   加了-r之后，绿色的部分要写xxx.tar.gz，压缩后的文件名</p>
-<p><strong>gzip解压：</strong></p>
-<p>gzip -d xxx.tar.gz  解压文件，-d表示解压</p>
-<p><strong>使用gzip一步压缩解压</strong></p>
-<p>tar -czvf xxx.tar.gz 待打包的文件</p>
-<p>tar -xzvf xxx.tar.gz  功能：解压文件包，后面加上-C 解压指定的目录 可以指定解压的目录</p>
-<p>使用bzip2一步压缩解压：只需要把 z 换成 j 即可</p>
-<p><strong>zip ，unzip 使用</strong>：主要是为了兼容windows压缩文件</p>
-<p>zip -r test.zip *  将当前目录所有文件压缩为test.zip</p>
-<p>unzip -d test test.zip 将test.zip解压到指定test目录，-d表示解压</p>
-<p><strong>which</strong>查看 命令所在的目录</p>
-<p>如：which查看ls所在的目录</p>
-<p>创建组：groupadd 如：groupadd abc 添加组</p>
-<p>删除组：groupdel </p>
-<p>把角色分配到用户组 usermod -g 用户组 用户名</p>
-<p>添加用户：useradd -d /home/abc abc -m 其中-d表示指定主目录，后面接用户目录 ，adc为用户名，-m自动创建目录（必须加）,-g moyu 可以在创建的时候指定组，这里的moyu为用户组</p>
-<p>删除用户：userdel abc -r 其中-r表示把用户目录也删除（没有-r还要自己手动删用户目录）</p>
-<p>sudo passwd abc 创建密码 ，adc为用户，用来指定创建谁的密码</p>
-<p>last查看用户登录时间</p>
-<p><strong>ps进程</strong>  ps -aux 查看进程 </p>
-<p>ps参数： -a :所有经常 -u:详细内容 -x:没有控制终端进程 -w：加宽显示界面 -r 显示在运行的后台进程</p>
-<p><strong>kill 杀死进程</strong> kill -9 进程号 其中-9表示强力杀死</p>
-<p>kill 进程号 杀死进程</p>
-<p><strong>top 动态查看进程    -m ：按内存使用排序 -p:cpu占有率  -T：按时长排序 -U:用户，后加用户名（过滤） 如： *<em>top -U moyu*</em> 显示moyu的所有进程 -K 杀死进程（后面加Pid值）</strong></p>
-<p>sudo su -moyu 切换用户，没有红色的部分为切换为root</p>
-<p><strong>设置后台进程：&amp;</strong></p>
-<p>如果有一个可执行程序为test，使用 ./test &amp; 表示到后台运行它</p>
-<p>jobs 查看后台</p>
-<p>fg调用后台 fg 编号 这里的编号指的是jobs查看得到的编号</p>
-<p>字符界面和图像界面切换</p>
-<p>redhat  : init 3 切换字符界面 init 5切换图形界面</p>
-<p>其他：快捷键切换 ctrl+alt+F3 切换字符界面 ctrl+alt+F1 切换图形界面</p>
-<p>df查看文件所在硬盘大小 du查看大小（目录），使用一般都是命令+文件</p>
-<h3 id="软件基本安装"><a href="#软件基本安装" class="headerlink" title="软件基本安装"></a>软件基本安装</h3><p>sudo apt-get update 更新软件</p>
-<p>sudo apt-get install xxx 安装软件</p>
-<p>sudo apt-get remove xxx 删除软件</p>
-<p>rpm -ivh xxx.rpm 安装rpm程序 其中-i表示指定安装的软件包，-v表示显示安装信息,-h表示进度</p>
-<p>ifconfig 查看ip信息</p>
-<p>ping ip地址 查看能否ping通</p>
-<p>远程linux-linux</p>
-<p>ssh -l username hostip 其中username表示对方用户名 ，hostip表示目标主机ip地址</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2021/03/13/article-title/">article title</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-13</time><div class="content"></div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2021/03/13/hello-world/">Hello World</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-13</time><div class="content"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-03-24 13:36:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</div><hr></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2021 By John Doe</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
-  $('#nav').addClass('is-mobile')
-  $('footer').addClass('is-mobile')
-  $('#top-container').addClass('is-mobile')
-}</script></body></html>
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Akesu" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Akesu</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Akesu</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E6%B6%88%E6%81%AF%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90/" title="消息初步分析">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="消息初步分析"></a></div><div class="recent-post-info"><a class="article-title" href="/%E6%B6%88%E6%81%AF%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90/" title="消息初步分析">消息初步分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-24T03:29:41.551Z" title="Created 2021-03-24 11:29:41">2021-03-24</time></span></div><div class="content">1.AddBalance接收方均为f05，消息发送方给f05转账
+目的描述：将收到的值存入托管的余额中。
+官方代码注解
+// Deposits the received value into the balance held in escrow.
+将收到的值存入托管的余额中。
+
+12345参数：		eg:				&quot;f01287&quot;		//消息发送方的矿工地址   //在最初的版本，第一条此类型的消息参数值是发送方的地址，后面几乎均为矿工				
+
+
+该参数为字符串解析后为字符串 可通过全节点接口 StateDecodeParams 直接解析参数,后续消息参数也可使用该接口解析，不过返回的类型是interface{}
+
+消息的value为转账给f05的金额
+12返回值：		无
+
+
+2.AddLockedFund普通账户给其账户下的矿工发送的消息，增加锁仓金额
+目的描述：锁定矿工的未锁定余额（包括与调用消息一起收到的资金）。
+官方代码注解：
+// Locks up some amount of the miner’s unlocked balance (including ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/" title="矿工和用户怎样合作共赢">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矿工和用户怎样合作共赢"></a></div><div class="recent-post-info"><a class="article-title" href="/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/" title="矿工和用户怎样合作共赢">矿工和用户怎样合作共赢</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-24T03:29:33.687Z" title="Created 2021-03-24 11:29:33">2021-03-24</time></span></div><div class="content">一、简介
+Filecoin网络通过允许任何人作为存储提供商参与实现了规模经济。目前，该网络由分布在全球各地的数百家存储提供商组成。内容寻址和加密存储证明验证了数据在矿工的硬件上长期正确安全地存储，从而创造了一个强大可靠的服务。
+
+这篇博文涵盖了Filecoin中两种类型交易的基本阶段，即存储交易和检索交易，并详细介绍了它们的生命周期。并解释了密码学证明是如何用于验证系统中的参与者是否按照承诺履行职责的。
+二、Filecoin的数据
+为了在Filecoin上存储文件，用户必须首先在其本地Filecoin节点中导入文件。这一步会产生一个数据CID——内容标识符，唯一描述该内容的ID，之后数据会传输给矿工。另一种在Filecoin上存储文件的方式是通过离线交易，这在本篇文章中没有涉及。
+将数据导入本地的Filecoin节点，可以使用lotus客户端导入命令。记住生成的数据CID很重要（以后在本地节点上也可以使用），因为以后从矿工那里检索数据时必须用到它。
+将数据导入本地节点后，用户必须发起交易。这可以通过lotus客户端交易命令来完成。该命令以数据CID作为输入，生成Filecoin Pie ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/" title="所有消息类型">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="所有消息类型"></a></div><div class="recent-post-info"><a class="article-title" href="/%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/" title="所有消息类型">所有消息类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-24T03:29:25.955Z" title="Created 2021-03-24 11:29:25">2021-03-24</time></span></div><div class="content">123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113package builtinimport (	&quot;github.com/filecoin-project/go-state-types/abi&quot;	builtin0 &quot;github.com/filecoin-project/specs-actors/actors/builtin&quot;)const (	MethodSend        = builtin0.MethodSend	MethodConstructor = builtin0.MethodConstructor)var MethodsAcc ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E6%94%AF%E4%BB%98%E9%80%9A%E9%81%93%E7%9B%B8%E5%85%B3/" title="支付通道相关">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付通道相关"></a></div><div class="recent-post-info"><a class="article-title" href="/%E6%94%AF%E4%BB%98%E9%80%9A%E9%81%93%E7%9B%B8%E5%85%B3/" title="支付通道相关">支付通道相关</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-24T03:29:13.587Z" title="Created 2021-03-24 11:29:13">2021-03-24</time></span></div><div class="content">在Filecoin这个市场上，矿工是主要角色。当矿工希望提供存储服务时，需要做以下几件事：
+1）存储矿工在网络登记（在Filecoin节点上执行创建矿工的指令），这时，Filecoin的链上会增加相应矿工的角色。
+2）存储矿工承诺可使用的存储空间并进行质押，这即是承诺质押（Pledge Collateral）。
+3）存储矿工挂单，声明单位存储的价格，并声明这个价格的有效期为多久。
+4）之后，存储用户可以询问网络，目前有哪些矿工在提供服务。
+5）经过比较，选定一个矿工，并提出交易要求。
+6）存储矿工收到交易申请，回复并达成交易。
+交易达成虽然只有一条指令，但其中涉及到很多细节。大致包括如下方面：
+查询区块链，查看是否指令中涉及到的矿工及其挂单是否有效；有效则继续，无效返回错误；
+连接矿工所在节点，如果不能连接，返回错误，能够连接，继续；
+等待矿工返回同意存储申请；
+传输需要存储的文件给矿工；
+创建支付通道，客户付费给支付通道（注意，不是直接付给矿工）；V丨FILkefu
+矿工接收完数据，开始做封装（Seal）；
+矿工封装完成，验证数据保存完整；
+在存储交易要求的区间内，矿工持续证明存储完 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="数据结构和算法">     <img class="post_bg" src="C:\Users\李德\Desktop\表情\1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构和算法"></a></div><div class="recent-post-info"><a class="article-title" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="数据结构和算法">数据结构和算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-21T15:22:10.000Z" title="Created 2021-03-21 23:22:10">2021-03-21</time></span></div><div class="content">算法基本概念什么是数据结构存储数据的不同方式
+
+-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
+什么是算法同一问题的不同解决方法
+
+
+算法往往是针对特定的数据结构的
+
+
+时间复杂度
+
+1.计算偏移量
+
+排序算法-宋词记忆法
+
+选择排序
+找最小往前排，记录最小值位置，交换最小值，记第一个值为最小值
+
+选择排序——程序编写
+
+选择排序大O分析
+选择排序结尾
+
+
+冒泡排序单个比较，大则交换，放到最后位置
+
+
+插入排序
+
+
+
+总结简单排序-选择、冒泡、插入
+希尔排序
+
+间隔为4的排序直到间隔为1
+间隔大交换次数少，间隔小。。短。
+给定间隔跳排，然后缩小间隔直到为1。
+
+
+
+
+归并排序递归归并一
+
+
+优化
+归并二
+
+
+快速排序
+
+
+
+
+
+while（left&lt;=right）
+双轴快排
+计数排序
+
+
+
+基数排序
+
+个位数一样放一个桶，十位数一样一个桶，以此类推。
+
+
+
+桶排序
+
+掌握计数和基数
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8-1/" title="linux命令大全">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux命令大全"></a></div><div class="recent-post-info"><a class="article-title" href="/linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8-1/" title="linux命令大全">linux命令大全</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-21T15:20:45.000Z" title="Created 2021-03-21 23:20:45">2021-03-21</time></span></div><div class="content">路径绝对路径：/…/…  相对路径：./ 表示当前目录，../表示上一级目录
+/表示根目录
+/bin目录（/usr/.bin:可执行二进制文件的目录)：存放工具
+/home:表示当前用户的家目录，如：moyu表示edu的家目录
+/etc:存配置文件 /dev:设备文件，挂载光驱
+/lib（/usr/lib）（/usr/local/lib）:存库函数
+文件权限drwxr-xr-x:以d开头的为目录文件，以-开头的为普通文件，b\c开头的为设备文件(主要在/dev)，l开头的为link链接文件（快捷方式)
+文件的权限很重要，如：drwxr-xr-x moyu root
+红色的区别文件类型，黄色的为：文件所有者权限，绿色的为用户组权限，紫色的为其他用户权限,这里的moyu为文件所有者，root为用户组。
+命令：
+whoami 查询当前用户
+cat 查看群号：cat /etc/group 查看所有用户组，里面的x:0，数字为用户组（群）号
+cat /etc/passwd 查看所有用户，里面的x:1001，数字为用户号
+如：给stdio.h其他用户分配写的权限 sudo chmod o+w st ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-21T08:57:19.498Z" title="Created 2021-03-21 16:57:19">2021-03-21</time></span></div><div class="content">路径绝对路径：/…/…  相对路径：./ 表示当前目录，../表示上一级目录
+/表示根目录
+/bin目录（/usr/.bin:可执行二进制文件的目录)：存放工具
+/home:表示当前用户的家目录，如：moyu表示edu的家目录
+/etc:存配置文件 /dev:设备文件，挂载光驱
+/lib（/usr/lib）（/usr/local/lib）:存库函数
+文件权限drwxr-xr-x:以d开头的为目录文件，以-开头的为普通文件，b\c开头的为设备文件(主要在/dev)，l开头的为link链接文件（快捷方式)
+文件的权限很重要，如：drwxr-xr-x moyu root
+红色的区别文件类型，黄色的为：文件所有者权限，绿色的为用户组权限，紫色的为其他用户权限,这里的moyu为文件所有者，root为用户组。
+命令：
+whoami 查询当前用户
+cat 查看群号：cat /etc/group 查看所有用户组，里面的x:0，数字为用户组（群）号
+cat /etc/passwd 查看所有用户，里面的x:1001，数字为用户号
+如：给stdio.h其他用户分配写的权限 sudo chmod o+w st ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/linux-commend/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-21T08:19:54.834Z" title="Created 2021-03-21 16:19:54">2021-03-21</time></span></div><div class="content">路径绝对路径：/…/…  相对路径：./ 表示当前目录，../表示上一级目录
+/表示根目录
+/bin目录（/usr/.bin:可执行二进制文件的目录)：存放工具
+/home:表示当前用户的家目录，如：moyu表示edu的家目录
+/etc:存配置文件 /dev:设备文件，挂载光驱
+/lib（/usr/lib）（/usr/local/lib）:存库函数
+文件权限drwxr-xr-x:以d开头的为目录文件，以-开头的为普通文件，b\c开头的为设备文件(主要在/dev)，l开头的为link链接文件（快捷方式)
+文件的权限很重要，如：drwxr-xr-x moyu root
+红色的区别文件类型，黄色的为：文件所有者权限，绿色的为用户组权限，紫色的为其他用户权限,这里的moyu为文件所有者，root为用户组。
+命令：
+whoami 查询当前用户
+cat 查看群号：cat /etc/group 查看所有用户组，里面的x:0，数字为用户组（群）号
+cat /etc/passwd 查看所有用户，里面的x:1001，数字为用户号
+如：给stdio.h其他用户分配写的权限 sudo chmod o+w st ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/article-title/" title="article title">article title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-13T06:18:11.000Z" title="Created 2021-03-13 14:18:11">2021-03-13</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-03-13T01:08:15.209Z" title="Created 2021-03-13 09:08:15">2021-03-13</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Akesu</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%B6%88%E6%81%AF%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90/" title="消息初步分析"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="消息初步分析"/></a><div class="content"><a class="title" href="/%E6%B6%88%E6%81%AF%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90/" title="消息初步分析">消息初步分析</a><time datetime="2021-03-24T03:29:41.551Z" title="Created 2021-03-24 11:29:41">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/" title="矿工和用户怎样合作共赢"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矿工和用户怎样合作共赢"/></a><div class="content"><a class="title" href="/%E7%9F%BF%E5%B7%A5%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%8E%E6%A0%B7%E5%90%88%E4%BD%9C%E5%85%B1%E8%B5%A2/" title="矿工和用户怎样合作共赢">矿工和用户怎样合作共赢</a><time datetime="2021-03-24T03:29:33.687Z" title="Created 2021-03-24 11:29:33">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/" title="所有消息类型"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="所有消息类型"/></a><div class="content"><a class="title" href="/%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/" title="所有消息类型">所有消息类型</a><time datetime="2021-03-24T03:29:25.955Z" title="Created 2021-03-24 11:29:25">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%94%AF%E4%BB%98%E9%80%9A%E9%81%93%E7%9B%B8%E5%85%B3/" title="支付通道相关"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付通道相关"/></a><div class="content"><a class="title" href="/%E6%94%AF%E4%BB%98%E9%80%9A%E9%81%93%E7%9B%B8%E5%85%B3/" title="支付通道相关">支付通道相关</a><time datetime="2021-03-24T03:29:13.587Z" title="Created 2021-03-24 11:29:13">2021-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="数据结构和算法"><img src="C:\Users\李德\Desktop\表情\1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构和算法"/></a><div class="content"><a class="title" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="数据结构和算法">数据结构和算法</a><time datetime="2021-03-21T15:22:10.000Z" title="Created 2021-03-21 23:22:10">2021-03-21</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">March 2021</span><span class="card-archive-list-count">10</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-24T05:36:19.533Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Akesu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
